@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Link Website — DAS Production</title>
+<style>
+:root{--neon:#00ffff}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family: "Poppins", sans-serif;
+  background:#000;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:100vh;
+  padding:40px 20px;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+.container{
+  width:100%;
+  max-width:520px;
+  text-align:center;
+}
+.logo{
+  font-size:1.6rem;
+  font-weight:700;
+  color:var(--neon);
+  margin-bottom:18px;
+  text-shadow:0 0 8px var(--neon);
+}
+.desc{
+  color:#ddd;
+  margin-bottom:18px;
+  opacity:0.9;
+}
+.color-picker-box{
+  margin-bottom:22px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+}
+.color-picker-box input{
+  width:48px;height:36px;border:none;background:#111;border-radius:6px;cursor:pointer;
+}
+.links{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+.link-card{
+  display:block;
+  padding:16px 18px;
+  background:linear-gradient(180deg,#070707,#0e0e0e);
+  color:#fff;
+  text-decoration:none;
+  border-radius:12px;
+  border:2px solid var(--neon);
+  box-shadow:
+    0 0 8px color-mix(in srgb, var(--neon) 60%, transparent),
+    0 8px 20px rgba(0,0,0,0.6);
+  font-size:1.05rem;
+  transition:transform .18s ease, box-shadow .18s ease;
+}
+.link-card:hover{
+  transform:translateY(-6px) scale(1.01);
+  box-shadow:
+    0 0 24px color-mix(in srgb, var(--neon) 80%, transparent),
+    0 16px 40px rgba(0,0,0,0.6);
+}
+.footer{
+  margin-top:18px;
+  color:#aaa;
+  font-size:0.9rem;
+  opacity:0.85;
+}
+@media(prefers-reduced-motion:reduce){
+  .link-card{transition:none}
+}
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">DAS Production</div>
+    <div class="desc">Kumpulan tautan resmi — klik untuk membuka</div>
+
+    <div class="color-picker-box">
+      <label for="neonColor" style="color:#ddd;font-size:0.95rem;">Warna neon:</label>
+      <input id="neonColor" type="color" value="#00ffff" aria-label="Pilih warna neon">
+    </div>
+
+    <div class="links" id="links">
+      <a class="link-card" href="https://www.tiktok.com/@david_s257?_r=1&_t=ZS-91glN4JSt0f" target="_blank" rel="noopener noreferrer">🔗 TIKTOK</a>
+      <a class="link-card" href="https://youtube.com/@dasexe00?si=Uffs6tirsRLs7-Mv" target="_blank" rel="noopener noreferrer">🎬 YouTube</a>
+      <a class="link-card" href="https://www.facebook.com/share/16aRyPSK1L/" target="_blank" rel="noopener noreferrer">🔗 Facebook</a>
+      <a class="link-card" href="https://www.instagram.com/david_das55?igsh=MWhhdGl3a2UyYnFkMQ==" target="_blank" rel="noopener noreferrer">🔗 Instagram</a>
+    </div>
+
+    <div class="footer">© 2025 Website DAS</div>
+  </div>
+
+<script>
+const neonColorInput = document.getElementById('neonColor');
+neonColorInput.addEventListener('input', (e) => {
+  document.documentElement.style.setProperty('--neon', e.target.value);
+});
+</script>
+</body>
+</html>
